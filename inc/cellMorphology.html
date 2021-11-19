@@ -1,0 +1,38 @@
+<div id="excercise">
+  <div style="font-size: 20px;" id="question">
+    Bacillus is a genus of bacteria that also refers to what cell shape?
+  </div>
+  <div id="choices">
+    <label style="font-size: 16.5px;" id="ca" onclick="setValue(1)" for="a">A) Spherical</label><br />
+    <label style="font-size: 16.5px;" id="cb" onclick="setValue(2)" for="b">B) Vibrio</label><br />
+    <label style="font-size: 16.5px;" id="cc" onclick="setValue(3)" for="c">C) Sarcina</label><br />
+    <label style="font-size: 16.5px;" id="cd" onclick="setValue(4)" for="d">D) Rod</label><br />
+    <input style="display:none;" name="choices" type="radio" id="a" value="a" />
+    <input style="display:none;" name="choices" type="radio" id="b" value="b" />
+    <input style="display:none;" name="choices" type="radio" id="c" value="c" />
+    <input style="display:none;" name="choices" type="radio" id="d" value="d" />
+  </div>
+  <u style="margin-left: 15px;"><i>Your answer : <span><b id="answer"></b></span></i></u>
+  <button style="position: absolute; right: 45%; background-color: #ebebe4;" class="btn btn-dark" onClick="submitCell()" id="submit">Submit</button>
+</div>
+
+<div id="scores" style="display: none;">
+  <center><h2 style="margin-top: 15px; margin-bottom: 15px;">Result</h2></center>
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td style="color: green;">Correct answers&nbsp;<span style="color: green;" class="fa fa-check"></span></td>
+        <td id="corrects"></td>
+      </tr>
+      <tr>
+        <td style="color: red;">Incorrect answers&nbsp;<span style="color: red;" class="fa fa-times"></span></td>
+        <td id="incorrects"></td>
+      </tr>
+      <tr>
+        <td style="color: grey;">Total questions&nbsp;<span style="color: grey;" class="fa fa-file"></span></td>
+        <td>5</td>
+      </tr>
+    </tbody>
+  </table>
+  <button onclick="showLesson()" style="margin-left: 35%;" class="btn btn-light">Review&nbsp;<span class="fa fa-book"></span></button>&nbsp;&nbsp;<button onClick="checkProgress()" class="btn btn-light">Check progress&nbsp;<span class="fa fa-chart-line"></span></button>
+</div>

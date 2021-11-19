@@ -1,0 +1,59 @@
+<h5 style="padding: 10px 20px;">Email me</h5>
+<h5 style="padding: 10px 20px; right: 40%; position: absolute; top: 20%;">Rate me</h5>
+<div class="row col-md-12" style="margin-left: 0%; height: 85%;">
+  <div class="row col-md-6" style="height: 100%;">
+    <div class="col-md-6">
+      To :<br /><br />
+      From :<br /><br />
+      Message :
+    </div>
+    <div class="col-md-6">
+      <input style="margin-bottom: 15px; width: 100%; height: 30px; border-radius: 5px; border: 2px solid #ebebe4; padding-left: 5px;" disabled type="email" value="thomaspanget@gmail.com"/><br />
+      <input placeholder="E-mail address" id="email" style="margin-bottom: 15px; width: 100%; height: 30px; border-radius: 5px; border: 2px solid #ebebe4; padding-left: 5px;" type="email"/>
+      <textarea placeholder="Message..." id="message" row="3" style="width: 100%; border-radius: 5px; border: 2px solid #ebebe4; padding-left: 5px;"></textarea>
+    </div>
+    <button onClick="alert('Succesfully E-mailed, thank you 😊.'); document.getElementById('message').value = ''; document.getElementById('email').value = '';" style="position: absolute; bottom: 30%; left: 37.5%; background-color: #ebebe4;" class="btn btn-dark">Submit</button>
+  </div>
+  <div class="row col-md-6" style="height: 100%;">
+    <div class="col-md-6">
+      <label style="margin: 5px 5px;">Web design :</label><br />
+      <label style="margin: 5px 5px;">Good looks :</label><br />
+      <label style="margin: 5px 5px;">Performance :</label><br />
+    </div>
+    <div class="col-md-6">
+      <label onClick="rateMe(1,1)" style="margin: 5px -5px; font-size: 20px;" for="design1"><span id="d1" class="fa fa-star"></span></label>
+      <label onClick="rateMe(1,2)" style="margin: 5px -5px; font-size: 20px;" for="design2"><span id="d2" class="fa fa-star"></span></label>
+      <label onClick="rateMe(1,3)" style="margin: 5px -5px; font-size: 20px;" for="design3"><span id="d3" class="fa fa-star"></span></label>
+      <label onClick="rateMe(1,4)" style="margin: 5px -5px; font-size: 20px;" for="design4"><span id="d4" class="fa fa-star"></span></label>
+      <label onClick="rateMe(1,5)" style="margin: 5px -5px; font-size: 20px;" for="design5"><span id="d5" class="fa fa-star"></span></label>
+
+      <label onClick="rateMe(2,1)" style="margin: 5px -5px; font-size: 20px;" for="looks1"><span id="l1" class="fa fa-star"></span></label>
+      <label onClick="rateMe(2,2)" style="margin: 5px -5px; font-size: 20px;" for="looks2"><span id="l2" class="fa fa-star"></span></label>
+      <label onClick="rateMe(2,3)" style="margin: 5px -5px; font-size: 20px;" for="looks3"><span id="l3" class="fa fa-star"></span></label>
+      <label onClick="rateMe(2,4)" style="margin: 5px -5px; font-size: 20px;" for="looks4"><span id="l4" class="fa fa-star"></span></label>
+      <label onClick="rateMe(2,5)" style="margin: 5px -5px; font-size: 20px;" for="looks5"><span id="l5" class="fa fa-star"></span></label>
+
+      <label onClick="rateMe(3,1)" style="margin: 5px -5px; font-size: 20px;" for="performance1"><span id="p1" class="fa fa-star"></span></label>
+      <label onClick="rateMe(3,2)" style="margin: 5px -5px; font-size: 20px;" for="performance2"><span id="p2" class="fa fa-star"></span></label>
+      <label onClick="rateMe(3,3)" style="margin: 5px -5px; font-size: 20px;" for="performance3"><span id="p3" class="fa fa-star"></span></label>
+      <label onClick="rateMe(3,4)" style="margin: 5px -5px; font-size: 20px;" for="performance4"><span id="p4" class="fa fa-star"></span></label>
+      <label onClick="rateMe(3,5)" style="margin: 5px -5px; font-size: 20px;" for="performance5"><span id="p5" class="fa fa-star"></span></label>
+    </div>
+    <input style="display: none;" id="design1" type="radio" name="design" value="1" />
+    <input style="display: none;" id="design2" type="radio" name="design" value="2" />
+    <input style="display: none;" id="design3" type="radio" name="design" value="3" />
+    <input style="display: none;" id="design4" type="radio" name="design" value="4" />
+    <input style="display: none;" id="design5" type="radio" name="design" value="5" />
+    <input style="display: none;" id="looks1" type="radio" name="looks" value="1" />
+    <input style="display: none;" id="looks2" type="radio" name="looks" value="2" />
+    <input style="display: none;" id="looks3" type="radio" name="looks" value="3" />
+    <input style="display: none;" id="looks4" type="radio" name="looks" value="4" />
+    <input style="display: none;" id="looks5" type="radio" name="looks" value="5" />
+    <input style="display: none;" id="performance1" type="radio" name="performance" value="1" />
+    <input style="display: none;" id="performance2" type="radio" name="performance" value="2" />
+    <input style="display: none;" id="performance3" type="radio" name="performance" value="3" />
+    <input style="display: none;" id="performance4" type="radio" name="performance" value="4" />
+    <input style="display: none;" id="performance5" type="radio" name="performance" value="5" />
+    <button onClick="rateSubmit()" class="btn btn-dark" style="position: absolute; bottom: 30%; right: 37.5%; background-color: #ebebe4;">Submit</button>
+  </div>
+</div>

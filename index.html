@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Microbiology</title>
+    <link rel="shortcut icon" type="image/png" href="images/logo.jpg">
+    <link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/fs.6.3-web/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" rel="stylesheet">
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <a style="cursor: pointer;" class="navbar-brand"><img style="margin-left: 15%;" src="images/logo.png" width="50" height="50" />&nbsp;Microbiology</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <form class="form-inline">
+          <div class="input-group">
+            <input style="border: 2px solid white;" required type="text" class="form-control" placeholder="Search...">
+            <div class="input-group-prepend">
+              <button type="submit" class="input-group-text"><span class="fa fa-search"></span></button>
+            </div>
+          </div>
+          &nbsp;&nbsp;&nbsp;
+          <span style="font-size: 25px;" onClick="showIcons(1)" title="Help" class="fa fa-info-circle"></span>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span onClick="showIcons(2)" style="font-size: 25px;" title="About me" class="fa fa-user-circle"></span>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span onClick="showIcons(3)" style="font-size: 25px;" title="E-mail me" class="fa fa-envelope-square"></span>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span onClick="showFollow()" style="font-size: 25px;" title="Follow me" class="fa fa-link"></span>
+        </form>
+      </div>
+    </nav>
+    <input style="display: none;" type="number" id="dnaWrong" /><input style="display: none;" type="number" id="dnaRight" /><input style="display: none;" type="text" id="para" /><input style="display: none;" type="number" id="qNumber" value="1" />
+    <!--Contents-->
+    <div id="main-body" class="col-md-12">
+      <div id="main-menu" class="col-md-10 offset-md-1">
+        <button style="background-color: white;" onClick="showHome()" id="homeButton"><span class="fa fa-home"></span>&nbsp;Home</button>
+        <button onClick="showLesson()" id="lessonButton"><span class="fa fa-book"></span>&nbsp;Lesson</button>
+        <button onClick="showExercise()" id="exerciseButton"><span class="fa fa-dumbbell"></span>&nbsp;Exercise</button>
+        <button onClick="showProgress()" id="progressButton"><del><span class="fa fa-chart-line"></span>&nbsp;Progress</button></del>
+        <div id="main-excess">
+        </div>
+        <div id="main-homeMenu" class="main-submenu">
+          <label onClick="linker(1)">Introduction</label>
+          <label onClick="linker(2)">Mission</label>
+          <label onClick="linker(3)">Vision</label>
+        </div>
+        <div style="display: none;" class="main-submenu" id="main-lessonMenu">
+          <label onClick="DropDown(1)">DNA&nbsp;<span style="transition: .1s;" id="lesson1" class="fa fa-angle-right"></span></label>
+          <label onClick="DropDown(2)">Diseases&nbsp;<span style="transition: .1s;" id="lesson2" class="fa fa-angle-right"></span></label>
+          <label onClick="DropDown(3)">Cell Morphology&nbsp;<span style="transition: .1s;" id="lesson3" class="fa fa-angle-right"></span></label>
+          <label onClick="DropDown(4)">Microorganisms&nbsp;<span style="transition: .1s;" id="lesson4" class="fa fa-angle-right"></span></label>
+          <label onClick="DropDown(5)">Protozoan&nbsp;<span style="transition: .1s;" id="lesson5" class="fa fa-angle-right"></span></label>
+        </div>
+        <div style="display: none;" class="main-submenu" id="main-exerciseMenu">
+          <label onClick="linker(24)">DNA</label>
+          <label onClick="linker(25)">Diseases</label>
+          <label onClick="linker(26)">Cell Morphology</label>
+          <label onClick="linker(27)">Microorganisms</label>
+          <label onClick="linker(28)">Protozoan</label>
+        </div>
+        <div style="display: none;" class="main-submenu" id="main-progressMenu">
+          <label><del>DNA</del></label>
+          <label><del>Diseases</del></label>
+          <label><del>Cell Morphology</del></label>
+          <label><del>Microorganisms</del></label>
+          <label><del>Protozoan</del></label>
+        </div>
+        <div style='height: 30px;' id="main-excess">
+        </div>
+
+        <!--Dropdowns-->
+        <div id="topic1" style="visibility: hidden; position: absolute; top: 22.5%; height: auto; width: 150px; background-color: white;">
+          <button onClick="linker(7);" style="width: auto;">Nucleotide</button>
+          <button onClick="linker(8);" style="width: auto;">Base Pairing</button>
+          <button onClick="linker(9);" style="width: auto;">Heredity</button>
+        </div>
+
+        <div id="topic2" style="left: 11%; visibility: hidden; position: absolute; top: 22.5%; height: auto; width: 130px; background-color: white;">
+          <button onClick="linker(10);" style="width: auto;">Theory</button>
+          <button onClick="linker(11);" style="width: auto;">Vaccines</button>
+          <button onClick="linker(12);" style="width: auto;">Comparison</button>
+        </div>
+
+        <div id="topic3" style="left: 23%; visibility: hidden; position: absolute; top: 22.5%; height: auto; width: 170px; background-color: white;">
+          <button onClick="linker(13);" style="width: auto;">Classification</button>
+          <button onClick="linker(14);" style="width: auto;">Cytoplasm</button>
+          <button onClick="linker(15);" style="width: auto;">Cell Walls</button>
+        </div>
+
+        <div id="topic4" style="left: 41%; visibility: hidden; position: absolute; top: 22.5%; height: auto; width: 170px; background-color: white;">
+          <button onClick="linker(16);" style="width: auto;">Fixation</button>
+          <button onClick="linker(17);" style="width: auto;">Cycle</button>
+          <button onClick="linker(18);" style="width: auto;">Anaerobic</button>
+        </div>
+
+        <div id="topic5" style="left: 57.5%; visibility: hidden; position: absolute; top: 22.5%; height: auto; width: 130px; background-color: white;">
+          <button onClick="linker(19);" style="width: auto;">Toxoplasmosis</button>
+          <button onClick="linker(20);" style="width: auto;">Giardia</button>
+          <button onClick="linker(21);" style="width: auto;">Malaria</button>
+        </div>
+
+        <div id="follow-tri" class="triangle-up"></div>
+        <div id="follow" style="visibility: hidden; top: -2.5%; right: -120.7px; position: absolute; height: auto; width: 145px; background-color: white;">
+          <a href="https://www.facebook.com/z3.star" target="_blank"><img title="Facebook" style="margin: 10px 10px;" width="50" height="50" src="images/facebook.png" /></a>
+          <a href="https://www.instagram.com/panda.panda3932/" target="_blank"><img title="Instagram" style="margin: 10px 10px;" width="50" height="50" src="images/instagram.png" /></a>
+          <a href="https://www.tumblr.com/blog/ultrasomerandomstranger" target="_blank"><img title="Tumblr" style="margin: 10px 10px;" width="50" height="50" src="images/tumblr.png" /></a>
+          <a href="https://twitter.com/p_qrow" target="_blank"><img title="Twitter" style="margin: 10px 10px;" width="50" height="50" src="images/twitter.png" /></a>
+        </div>
+        <!--End of Dropdowns-->
+        <div id="main-content">
+          <script> linker(1); </script>
+        </div>
+
+      </div>
+    </div>
+    <!--End of Contents-->
+    <footer>
+      <label style="color: white; padding-top: .5%;">Copyright © 2019 . All rights reserved.</label>
+    </footer>
+  </body>
+</html>
